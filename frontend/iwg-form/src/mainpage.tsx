@@ -2,11 +2,14 @@ import React from 'react';
 import './mainpage.css';
 import './formcomponents.css';
 import imageSrc from './assets/tmc-logo.jpeg';
+import CheckWithText from './components/checkwithtext';
+import Spacer from './components/spacer';
 
 const MainPage: React.FC = () => {
     return (
         <main id="mainpage">
             <div className="form-container">
+                {/* header-logo row div */}
                 <div className="parent">
                     {/* header div */}
                     <div className="child">
@@ -27,10 +30,25 @@ const MainPage: React.FC = () => {
                         />
                     </div>
                 </div>
+                
                 <div>
                     <span className="asterisk">*</span>
                     <span className="information"> </span>
                     <span className="required">Required</span>
+                </div>
+                <Spacer height={20} />
+                <div className="subheader">Send my report to:</div>
+                <Spacer height={10} />
+                <div className='parent'>
+                    <div className="child">
+                        <CheckWithText text="CAIR" />
+                    </div>
+                    <div className="child">
+                        <CheckWithText text="DPSS" />
+                    </div>
+                    <div className="child">
+                        <CheckWithText text="Third" />
+                    </div>
                 </div>
             </div>
         </main>
