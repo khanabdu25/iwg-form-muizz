@@ -24,7 +24,7 @@ const SelectLabels: React.FC<SelectLabelsProps> = ({ labelText, options }) => {
             <span style={asteriskStyle}>*</span>
         </div>
         <div> 
-            <FormControl sx={{ m: 1, minWidth: 180 }}>
+            <FormControl sx={{ m: 0, minWidth: 180 }}>
                 <Select
                   value={selection}
                   onChange={handleChange}
@@ -64,5 +64,5 @@ const containerStyle: CSSProperties = {
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'flex-start',
-  gap: '10px',
+  gap: '3px',
 };

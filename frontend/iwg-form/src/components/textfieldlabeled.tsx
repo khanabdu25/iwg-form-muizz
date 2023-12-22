@@ -25,7 +25,7 @@ const TextfieldWithLabel: React.FC<TextfieldWithLabelProps> = ({ labelText }) =>
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'flex-start',
-        gap: '10px',
+        gap: '5px',
     };
 
     return (
