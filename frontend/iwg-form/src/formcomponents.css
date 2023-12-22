@@ -67,4 +67,12 @@
     font-family: 'Inter', sans-serif; 
     text-decoration: underline; 
 }
+
+.label-style {
+    color: #a0aec0;
+    font-size: 15px;
+    font-weight: normal;
+    font-family: 'Inter', sans-serif;
+    text-decoration: underline;
+}
   

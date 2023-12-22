@@ -5,36 +5,17 @@ import MenuItem from '@mui/material/MenuItem';
 
 interface SelectLabelsProps {
     labelText: string;
+    options: string[];  // New prop to accept the list of strings
 }
 
-const SelectLabels: React.FC<SelectLabelsProps> = ({ labelText }) => {
+const SelectLabels: React.FC<SelectLabelsProps> = ({ labelText, options }) => {
   const [selection, setSelection] = React.useState('');
 
   const handleChange = (event: SelectChangeEvent) => {
     setSelection(event.target.value);
   };
 
-  const labelStyle: CSSProperties = {
-    color: '#a0aec0',
-    fontSize: '15px',
-    fontWeight: 'normal',
-    fontFamily: 'Inter, sans-serif',
-    textDecoration: 'underline',
-  };
-
-  const asteriskStyle: CSSProperties = {
-    color: '#e3342f',
-    fontSize: '15px',
-    fontWeight: 'normal',
-    fontFamily: 'Inter, sans-serif',
-  };
-
-  const containerStyle: CSSProperties = {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'flex-start',
-    gap: '10px',
-  };
+  // ... (Styles remain unchanged)
 
   return (
     <div style={containerStyle}>
@@ -42,7 +23,7 @@ const SelectLabels: React.FC<SelectLabelsProps> = ({ labelText }) => {
             <span style={labelStyle}>{labelText}</span>
             <span style={asteriskStyle}>*</span>
         </div>
-        <div > 
+        <div> 
             <FormControl sx={{ m: 1, minWidth: 180 }}>
                 <Select
                   value={selection}
@@ -51,9 +32,9 @@ const SelectLabels: React.FC<SelectLabelsProps> = ({ labelText }) => {
                   inputProps={{ 'aria-label': 'Without label' }}
                 >
                   <MenuItem value=""><em>None</em></MenuItem>
-                  <MenuItem value="UM Student">UM Student</MenuItem>
-                  <MenuItem value="Faculty">Faculty</MenuItem>
-                  <MenuItem value="Other">Other</MenuItem>
+                  {options.map((option) => (
+                    <MenuItem key={option} value={option}>{option}</MenuItem>
+                  ))}
                 </Select>
             </FormControl>
         </div>
@@ -62,3 +43,26 @@ const SelectLabels: React.FC<SelectLabelsProps> = ({ labelText }) => {
 }
 
 export default SelectLabels;
+
+
+const labelStyle: CSSProperties = {
+  color: '#a0aec0',
+  fontSize: '15px',
+  fontWeight: 'normal',
+  fontFamily: 'Inter, sans-serif',
+  textDecoration: 'underline',
+};
+
+const asteriskStyle: CSSProperties = {
+  color: '#e3342f',
+  fontSize: '15px',
+  fontWeight: 'normal',
+  fontFamily: 'Inter, sans-serif',
+};
+
+const containerStyle: CSSProperties = {
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'flex-start',
+  gap: '10px',
+};

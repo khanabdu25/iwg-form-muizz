@@ -6,6 +6,7 @@ import CheckWithText from './components/checkwithtext';
 import Spacer from './components/spacer';
 import TextfieldWithLabel from './components/textfieldlabeled';
 import SelectLabels from './components/selectmenu';
+import { TextField } from '@mui/material';
 
 const MainPage: React.FC = () => {
     return (
@@ -63,7 +64,7 @@ const MainPage: React.FC = () => {
                         <TextfieldWithLabel labelText='Umich Email' />
                     </div>
                     <div className="child">
-                        <SelectLabels labelText='Affiliation'/>
+                        <SelectLabels labelText='Affiliation' options = {AffiliationList}/>
                     </div>
                 </div>
                 <Spacer height={10}/>
@@ -84,9 +85,79 @@ const MainPage: React.FC = () => {
                         <TextfieldWithLabel labelText='Zip' />
                     </div>
                 </div>
+                <Spacer height={10}/>
+                <div>
+                    <span className = "label-style">Address</span>
+                    <span className="asterisk">*</span>
+                </div>
+                <TextField />
+                <Spacer height ={10}/>
+                <div className='parent'>
+                    <div className="child">
+                        <TextfieldWithLabel labelText='City' />
+                    </div>
+                    <div className="child">
+                        <SelectLabels labelText='State' options={usStates}/>
+                    </div>
+                </div>
             </div>
         </main>
     );
 };
 
 export default MainPage;
+
+const AffiliationList = ['UM Student', 'Faculty', 'Staff', 'Alumni', 'Visitor'];
+const usStates = [
+    "Alabama",
+    "Alaska",
+    "Arizona",
+    "Arkansas",
+    "California",
+    "Colorado",
+    "Connecticut",
+    "Delaware",
+    "Florida",
+    "Georgia",
+    "Hawaii",
+    "Idaho",
+    "Illinois",
+    "Indiana",
+    "Iowa",
+    "Kansas",
+    "Kentucky",
+    "Louisiana",
+    "Maine",
+    "Maryland",
+    "Massachusetts",
+    "Michigan",
+    "Minnesota",
+    "Mississippi",
+    "Missouri",
+    "Montana",
+    "Nebraska",
+    "Nevada",
+    "New Hampshire",
+    "New Jersey",
+    "New Mexico",
+    "New York",
+    "North Carolina",
+    "North Dakota",
+    "Ohio",
+    "Oklahoma",
+    "Oregon",
+    "Pennsylvania",
+    "Rhode Island",
+    "South Carolina",
+    "South Dakota",
+    "Tennessee",
+    "Texas",
+    "Utah",
+    "Vermont",
+    "Virginia",
+    "Washington",
+    "West Virginia",
+    "Wisconsin",
+    "Wyoming"
+  ];
+  
