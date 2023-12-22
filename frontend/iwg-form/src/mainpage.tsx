@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState } from 'react';
+//import { useState } from 'react';
 import './mainpage.css';
 import './formcomponents.css';
 import imageSrc from './assets/tmc-logo.jpeg';
@@ -16,12 +16,12 @@ import Button from '@mui/material/Button';
 import SendIcon from '@mui/icons-material/Send';
 
 
-type ValuePiece = Date | null;
+//type ValuePiece = Date | null;
 
-type Value = ValuePiece | [ValuePiece, ValuePiece];
+//type Value = ValuePiece | [ValuePiece, ValuePiece];
 
 const MainPage: React.FC = () => {
-    const [value, onChange] = useState<Value>(new Date());
+    //const [value, onChange] = useState<Value>(new Date());
     return (
         <main id="mainpage">
             <div className="form-container">
