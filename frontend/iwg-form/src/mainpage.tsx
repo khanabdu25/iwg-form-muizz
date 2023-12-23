@@ -41,23 +41,17 @@ const MainPage: React.FC = () => {
 				</div>
 				<div className="subheader">Send my report to:</div>
 
-				<div className="parent">
-					<div className="child">
-						<CheckWithText text="CAIR" />
-					</div>
-					<div className="child">
-						<CheckWithText text="DPSS" />
-					</div>
-					<div className="child">
-						<CheckWithText text="ECRT" />
-					</div>
+				<div id="checkbox-style">
+					<CheckWithText text="CAIR" />
+					<CheckWithText text="DPSS" />
+					<CheckWithText text="ECRT" />
 				</div>
 
 				<Spacer height={0} />
 
 				<div className="subheader">Enter your Information:</div>
 
-				<div className="bottom-margin">
+				<div className="checkbox-style">
 					<CheckWithText text="Keep my report anonymous" />
 					<CheckWithText text="I consent to give media my contact info" />
 				</div>
@@ -114,22 +108,14 @@ const MainPage: React.FC = () => {
 						formType="time"
 					/>
 				</div>
-				<div className="bottom-margin">
-					<div>
-						<span className="label-style">
-							Description of Incident
-						</span>
-						<span className="asterisk">*</span>
-					</div>
-					{/* <Spacer height={3} /> */}
-					<TextField
-						id="outlined-multiline-static"
-						multiline
-						rows={4}
-						className="TextField"
+
+				<div className="row">
+					<FormElement
+						labelText="Description of Incident"
+						formType="big-text"
 					/>
 				</div>
-				<div className="bottom-margin">
+				<div className="row">
 					<div>
 						<span className="label-style">Attach Evidence</span>
 					</div>

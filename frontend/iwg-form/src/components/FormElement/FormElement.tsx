@@ -4,7 +4,7 @@ import FormControl from "@mui/material/FormControl";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
 import MenuItem from "@mui/material/MenuItem";
 import dayjs from "dayjs";
-import { DateTimeField } from "@mui/x-date-pickers/DateTimeField";
+import { MobileDatePicker } from '@mui/x-date-pickers/MobileDatePicker';
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import "./FormElement.css";
@@ -61,12 +61,15 @@ const FormElement: React.FC<FormElement> = ({
 			);
 		} else if (formType === "time") {
 			return (
-				<LocalizationProvider dateAdapter={AdapterDayjs}>
-					<DateTimeField
-						defaultValue={dayjs("2022-04-17T15:30")}
-						size="small"
-					/>
-				</LocalizationProvider>
+				<p>hello</p>
+			);
+		} else if (formType === "big-text"){
+			return (
+				<TextField
+					className="input-style"
+					multiline
+					rows={4}
+				/>
 			);
 		}
 		return <p>{formType} is not a valid type you dog</p>;
