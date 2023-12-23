@@ -15,17 +15,20 @@ const TextfieldWithLabel: React.FC<TextfieldWithLabelProps> = ({ labelText }) =>
     };
 
     const asteriskStyle: CSSProperties = {
-        color: '#e3342f',
-        fontSize: '15px',
-        fontWeight: 'normal',
-        fontFamily: 'Inter, sans-serif',
-    };
+		color: "#e3342f",
+		fontSize: "15px",
+		fontWeight: "normal",
+		fontFamily: "Inter, sans-serif",
+	};
 
     const containerStyle: CSSProperties = {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'flex-start',
         gap: '5px',
+        backgroundColor: 'black',
+        width: '100%',
+        // margin: "2px"
     };
 
     return (

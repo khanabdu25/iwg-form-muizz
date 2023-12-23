@@ -62,8 +62,10 @@ const asteriskStyle: CSSProperties = {
 };
 
 const containerStyle: CSSProperties = {
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'flex-start',
-  gap: '3px',
+	display: "flex",
+	flexDirection: "column",
+	alignItems: "flex-start",
+	gap: "5px",
+	backgroundColor: "blue",
+  width: "100%",
 };
