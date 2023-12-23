@@ -12,8 +12,6 @@ import dayjs from 'dayjs';
 import { DateTimeField } from '@mui/x-date-pickers/DateTimeField';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
-import Button from '@mui/material/Button';
-import SendIcon from '@mui/icons-material/Send';
 
 
 //type ValuePiece = Date | null;
@@ -52,9 +50,9 @@ const MainPage: React.FC = () => {
                     <span className="information"> </span>
                     <span className="required">Required</span>
                 </div>
-                <Spacer height={20} />
+
                 <div className="subheader">Send my report to:</div>
-                <Spacer height={10} />
+
                 <div className='parent'>
                     <div className="child">
                         <CheckWithText text="CAIR" />
@@ -66,12 +64,14 @@ const MainPage: React.FC = () => {
                         <CheckWithText text="ECRT" />
                     </div>
                 </div>
-                <Spacer height={30} />
+
                 <div className="subheader">Enter your Information:</div>
-                <Spacer height={10} />
-                <CheckWithText text="Keep my report anonymous" />
-                <CheckWithText text="I consent to give media my contact info" />
-                <Spacer height={30} />
+
+                <div className='bottom-margin'>
+                    <CheckWithText text="Keep my report anonymous" />
+                    <CheckWithText text="I consent to give media my contact info" />
+                </div>
+
                 <div className='parent'>
                     <div className="child">
                         <TextfieldWithLabel labelText='Umich Email' />
@@ -80,7 +80,7 @@ const MainPage: React.FC = () => {
                         <SelectLabels labelText='Affiliation' options={AffiliationList} />
                     </div>
                 </div>
-                <Spacer height={10} />
+
                 <div className='parent'>
                     <div className="child">
                         <TextfieldWithLabel labelText='First Name' />
@@ -89,7 +89,7 @@ const MainPage: React.FC = () => {
                         <TextfieldWithLabel labelText='Last Name' />
                     </div>
                 </div>
-                <Spacer height={10} />
+
                 <div className='parent'>
                     <div className="child">
                         <TextfieldWithLabel labelText='Phone' />
@@ -98,14 +98,16 @@ const MainPage: React.FC = () => {
                         <TextfieldWithLabel labelText='Zip' />
                     </div>
                 </div>
-                <Spacer height={10} />
-                <div>
-                    <span className="label-style">Address</span>
-                    <span className="asterisk">*</span>
+
+                <div className="bottom-margin">
+                    <div>
+                        <span className="label-style">Address</span>
+                        <span className="asterisk">*</span>
+                    </div>
+
+                    <TextField className="TextField" />
                 </div>
-                <Spacer height={5} />
-                <TextField />
-                <Spacer height={10} />
+
                 <div className='parent'>
                     <div className="child">
                         <TextfieldWithLabel labelText='City' />
@@ -114,7 +116,7 @@ const MainPage: React.FC = () => {
                         <SelectLabels labelText='State' options={usStates} />
                     </div>
                 </div>
-                <Spacer height={10} />
+
                 <div className='parent'>
                     <div className="child">
                         <SelectLabels labelText='Religion' options={religions} />
@@ -123,9 +125,9 @@ const MainPage: React.FC = () => {
                         <TextfieldWithLabel labelText='Race/Ethnicity' />
                     </div>
                 </div>
-                <Spacer height={30} />
+
                 <div className="subheader">Tell us about the incident:</div>
-                <Spacer height={10} />
+
                 <div className='parent'>
                     <div className="child">
                         <TextfieldWithLabel labelText='Incident Location' />
@@ -135,24 +137,42 @@ const MainPage: React.FC = () => {
                             <span className="label-style">Date/Time</span>
                             <span className="asterisk">*</span>
                         </div>
-                        <Spacer height={5} />
+                        <Spacer height={3} />
                         <LocalizationProvider dateAdapter={AdapterDayjs}>
                             <DateTimeField defaultValue={dayjs('2022-04-17T15:30')} />
                         </LocalizationProvider>
                     </div>
                 </div>
-                <Spacer height={85} />
-                <TextField
-                    id="outlined-multiline-static"
-                    label="Detailed Description *"
-                    multiline
-                    rows={4}
-                    defaultValue="Incident Description"
-                />
-                <Spacer height = {85}/>
-                <Button variant="contained" endIcon={<SendIcon />}>
-                    Send
-                </Button>
+                <div className="bottom-margin">
+                    <div>
+                        <span className="label-style">Description of Incident</span>
+                        <span className="asterisk">*</span>
+                    </div>
+                        <Spacer height={3} />
+                    <TextField
+                        id="outlined-multiline-static"
+                        multiline
+                        rows={4}
+                        className="TextField"
+                    />
+                </div>
+                <div className="bottom-margin">
+                    <div>
+                        <span className="label-style">Attach Evidence</span>
+                    </div>
+                    <Spacer height={3} />
+                    <button className="image-button-style">
+                        <img src="/material-symbols_image-outline.svg" alt="Icon" className="icon-style" />
+                        <span className="text-style">Choose image</span>
+                    </button>
+                </div>
+                <div className="button-container">
+                    <button className="button-style">
+                        <span className="submit-text">Submit</span>
+                        <img className="send-symbol" src="/iconamoon_send-light.svg" alt="Send" />
+                    </button>
+                </div>
+
             </div>
         </main>
     );

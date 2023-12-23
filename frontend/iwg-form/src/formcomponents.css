@@ -36,6 +36,7 @@
     justify-content: space-between;
     width: 100%;
     align-items: center;
+    margin-bottom: 1rem;
 }
 
 .child {
@@ -75,4 +76,75 @@
     font-family: 'Inter', sans-serif;
     text-decoration: underline;
 }
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  .button-style {
+    width: 110.66px;
+    height: 34.34px;
+    background-color: #48bb78;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.10);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .submit-text {
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .send-symbol {
+    width: 17.81px;
+    height: 17.81px;
+    position: relative;
+  }
+
+  .bottom-margin {
+    margin-bottom: 1rem;
+  }
+
+  .TextField {
+    width: 100%;
+  }
+
+  .image-button-style {
+    width: 139.92px;
+    height: 24.17px;
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid #D1D5DB; /* Tailwind CSS neutral-500 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px; /* Adjust the gap between icon and text as needed */
+    padding: 4px; /* Adjust for padding inside the button */
+    box-sizing: border-box;
+  }
+  
+  .icon-style {
+    width: 19.08px;
+    height: 19.08px;
+    /* If your icon is SVG, additional styling can be applied as needed */
+  }
+  
+  .text-style {
+    color: black;
+    font-size: 10.88px;
+    font-family: 'Inter', sans-serif;
+    font-weight: normal;
+  }
+  
+  
   
