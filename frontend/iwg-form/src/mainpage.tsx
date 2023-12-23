@@ -1,17 +1,8 @@
 import React from "react";
-//import { useState } from 'react';
 import "./mainpage.css";
 import "./formcomponents.css";
-import imageSrc from "./assets/tmc-logo.jpeg";
-import CheckWithText from "./components/checkwithtext";
-import Spacer from "./components/spacer";
-import TextfieldWithLabel from "./components/textfieldlabeled";
-import SelectLabels from "./components/selectmenu";
-import { TextField } from "@mui/material";
-import dayjs from "dayjs";
-import { DateTimeField } from "@mui/x-date-pickers/DateTimeField";
-import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
-import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
+import LOGO_PATH from "./assets/tmc-logo.jpeg";
+import Spacer from "./components/Spacer/Spacer";
 import FormElement from "./components/FormElement/FormElement";
 
 const MainPage: React.FC = () => {
@@ -28,7 +19,7 @@ const MainPage: React.FC = () => {
 						width: "auto",
 						flexShrink: 0,
 					}}
-					src={imageSrc}
+					src={LOGO_PATH}
 					alt="Description"
 				/>
 			</div>
@@ -42,19 +33,36 @@ const MainPage: React.FC = () => {
 				<div className="subheader">Send my report to:</div>
 
 				<div id="checkbox-style">
-					<CheckWithText text="CAIR" />
-					<CheckWithText text="DPSS" />
-					<CheckWithText text="ECRT" />
+					<FormElement
+						labelText="CAIR"
+						formType="checkbox"
+					/>
+					<FormElement
+						labelText="DPSS"
+						formType="checkbox"
+					/>
+					<FormElement
+						labelText="ECRT"
+						formType="checkbox"
+					/>
 				</div>
 
-				<Spacer height={0} />
+				<Spacer height={20} />
 
 				<div className="subheader">Enter your Information:</div>
 
 				<div className="checkbox-style">
-					<CheckWithText text="Keep my report anonymous" />
-					<CheckWithText text="I consent to give media my contact info" />
+					<FormElement
+						labelText="Keep my report anonymous"
+						formType="checkbox"
+					/>
+					<FormElement
+						labelText="I consent to give media my contact info"
+						formType="checkbox"
+					/>
 				</div>
+
+				<Spacer height={15} />
 
 				<div className="row">
 					<FormElement labelText="Umich Email" formType="text" />
@@ -94,7 +102,7 @@ const MainPage: React.FC = () => {
 					<FormElement labelText="Race/Ethnicity" formType="text" />
 				</div>
 
-				<Spacer height={0} />
+				<Spacer height={20} />
 
 				<div className="subheader">Tell us about the incident:</div>
 
@@ -112,33 +120,23 @@ const MainPage: React.FC = () => {
 				<div className="row">
 					<FormElement
 						labelText="Description of Incident"
-						formType="big-text"
+						formType="multiline-text"
 					/>
 				</div>
 				<div className="row">
-					<div>
-						<span className="label-style">Attach Evidence</span>
-					</div>
-					{/* <Spacer height={3} /> */}
-					<button className="image-button-style">
-						<img
-							src="/material-symbols_image-outline.svg"
-							alt="Icon"
-							className="icon-style"
-						/>
-						<span className="text-style">Choose image</span>
-					</button>
+					<FormElement labelText="Attach Evidence" formType="image" />
 				</div>
-				<div className="button-container">
-					<button className="button-style">
-						<span className="submit-text">Submit</span>
-						<img
-							className="send-symbol"
-							src="/iconamoon_send-light.svg"
-							alt="Send"
-						/>
-					</button>
-				</div>
+
+				<Spacer height={20} />
+
+				<button id="submit-button">
+					Submit
+					<img
+						id="send-symbol"
+						src="/iconamoon_send-light.svg"
+						alt="Send"
+					/>
+				</button>
 			</div>
 		</main>
 	);

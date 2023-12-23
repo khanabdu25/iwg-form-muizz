@@ -9,7 +9,6 @@
 	margin: 10px 0;
 }
 
-
 .asterisk {
 	color: #e3342f;
 	font-size: 0.75rem;
@@ -42,7 +41,6 @@
 }
 
 .row {
-	/* background-color: rgb(143, 143, 229); */
 	display: flex;
 	justify-content: flex-start;
 	margin-bottom: 5px;
@@ -55,60 +53,31 @@
 	font-family: "Inter", sans-serif;
 }
 
-.check-with-text {
-	display: flex;
-	align-items: center;
-	gap: 8px;
-}
-
-.check-with-text input[type="checkbox"] {
-}
-
-.check-with-text label {
-	color: #a0aec0;
-	font-size: 15px;
-	font-weight: normal;
-	font-family: "Inter", sans-serif;
-	text-decoration: underline;
-}
-
 .label-style {
-	color: #a0aec0;
+	color: #6b747f;
 	font-size: 15px;
 	font-weight: normal;
 	font-family: "Inter", sans-serif;
 	text-decoration: underline;
 }
 
-.button-container {
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-end;
-	align-items: center;
-}
-
-.button-style {
+#submit-button {
+	color: white;
+	font-size: 1rem;
+	font-weight: bold;
+	font-family: "Inter", sans-serif;
+	display: block;
+	margin: 0 auto;
 	width: 110.66px;
 	height: 34.34px;
 	background-color: #48bb78;
 	border-radius: 5px;
 	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	gap: 8px;
 	border: none;
 	cursor: pointer;
 }
 
-.submit-text {
-	color: white;
-	font-size: 1rem;
-	font-weight: bold;
-	font-family: "Inter", sans-serif;
-}
-
-.send-symbol {
+#send-symbol {
 	width: 17.81px;
 	height: 17.81px;
 	position: relative;
@@ -118,9 +87,6 @@
 	margin-bottom: 1rem;
 }
 
-.TextField {
-	width: 100%;
-}
 
 .image-button-style {
 	width: 139.92px;
@@ -154,4 +120,3 @@
 	justify-content: space-between;
 	margin-bottom: 10px;
 }
-

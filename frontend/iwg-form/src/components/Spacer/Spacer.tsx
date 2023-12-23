@@ -9,20 +9,7 @@ const Spacer: React.FC<SpacerProps> = ({ height }) => {
 		height: typeof height === "number" ? `${height}px` : height,
 	};
 
-	const border = {
-		// height: "0px",
-		border: "solid black 1px",
-        width: "300px",
-        margin: "10px auto"
-
-
-	};
-
-	return (
-		<>
-			<div style={border}></div> <div style={style} />
-		</>
-	);
+	return <div style={style} />;
 };
 
 export default Spacer;
