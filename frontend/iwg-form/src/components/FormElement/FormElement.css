@@ -1,3 +1,4 @@
+
 .form-item {
 	margin-right: 10px;
 	flex-grow: 1;
@@ -8,6 +9,7 @@
 	font-weight: normal;
 	font-family: "Inter", sans-serif;
 	text-decoration: underline;
+
 }
 
 .form-item span {
@@ -18,10 +20,7 @@
 	margin-right: 0px;
 }
 
-.input-style {
-	/* border: solid blue 2px; */
-	width: 100%;
-}
+
 
 .date-height {
 	/* height: 10px; */
@@ -34,15 +33,13 @@
     display: block;
 }
 
+
 /* Checkbox style */
 .check-with-text {
 	display: flex;
 	align-items: center;
 	gap: 8px;
 }
-/* 
-.check-with-text input[type="checkbox"] {
-} */
 
 .check-with-text label {
 	/* color: #a0aec0; */
@@ -51,4 +48,5 @@
 	font-weight: normal;
 	font-family: "Inter", sans-serif;
 	text-decoration: underline;
+
 }
