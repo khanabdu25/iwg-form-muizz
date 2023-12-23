@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useRef} from "react";
 import "./mainpage.css";
 import "./formcomponents.css";
 import LOGO_PATH from "./assets/tmc-logo.jpeg";
@@ -6,7 +6,23 @@ import Spacer from "./components/Spacer/Spacer";
 import FormElement from "./components/FormElement/FormElement";
 
 const MainPage: React.FC = () => {
+    const formRef = useRef<HTMLFormElement>(null);
 	//const [value, onChange] = useState<Value>(new Date());
+
+    const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+		event.preventDefault();
+		if (formRef.current) {
+			const formData = new FormData(formRef.current);
+			// const data = {};
+            const data: { [key: string]: FormDataEntryValue } = {};
+			formData.forEach((value, key) => {
+				data[key] = value;
+			});
+			console.log(data); // Here you have your form data
+			// Now you can handle the submission (e.g., send data to a server)
+		}
+	};
+
 	return (
 		<main id="mainpage">
 			<div className="parent">
@@ -24,7 +40,7 @@ const MainPage: React.FC = () => {
 				/>
 			</div>
 
-			<div className="form-container">
+			<form ref={formRef} className="form-container" onSubmit={handleSubmit}>
 				<div>
 					<span className="asterisk">*</span>
 					<span className="information"> </span>
@@ -33,18 +49,9 @@ const MainPage: React.FC = () => {
 				<div className="subheader">Send my report to:</div>
 
 				<div id="checkbox-style">
-					<FormElement
-						labelText="CAIR"
-						formType="checkbox"
-					/>
-					<FormElement
-						labelText="DPSS"
-						formType="checkbox"
-					/>
-					<FormElement
-						labelText="ECRT"
-						formType="checkbox"
-					/>
+					<FormElement labelText="CAIR" formType="checkbox" />
+					<FormElement labelText="DPSS" formType="checkbox" />
+					<FormElement labelText="ECRT" formType="checkbox" />
 				</div>
 
 				<Spacer height={20} />
@@ -137,7 +144,7 @@ const MainPage: React.FC = () => {
 						alt="Send"
 					/>
 				</button>
-			</div>
+			</form>
 		</main>
 	);
 };

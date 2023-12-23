@@ -25,6 +25,7 @@ const FormElement: React.FC<FormElement> = ({
 		if (formType === "text") {
 			return (
 				<TextField
+					name={labelText}
 					id="outlined-basic"
 					variant="outlined"
 					size="small"
@@ -43,6 +44,7 @@ const FormElement: React.FC<FormElement> = ({
 						onChange={handleChange}
 						displayEmpty
 						inputProps={{ "aria-label": "Without label" }}
+						name={labelText}
 					>
 						<MenuItem value="">
 							<em>None</em>
@@ -58,22 +60,36 @@ const FormElement: React.FC<FormElement> = ({
 		} else if (formType === "time") {
 			return <p>hello</p>;
 		} else if (formType === "multiline-text") {
-			return <TextField className="input-style" multiline rows={4} />;
+			return (
+				<TextField
+					className="input-style"
+					multiline
+					rows={4}
+					name={labelText}
+				/>
+			);
 		} else if (formType === "image") {
 			return (
-				<button className="image-button-style">
+				<label className="image-button-style">
 					<img
 						src="/material-symbols_image-outline.svg"
 						alt="Icon"
 						className="icon-style"
 					/>
 					<span className="text-style">Choose image</span>
-				</button>
+					<input
+						type="file"
+						accept="image/*"
+						// onChange={handleFileChange}
+						style={{ display: "none" }}
+						name={labelText}
+					/>
+				</label>
 			);
 		} else if (formType === "checkbox"){
 			return (
 				<div className="check-with-text">
-					<input type="checkbox" id="checkbox-id" defaultChecked={true}/>
+					<input type="checkbox" id="checkbox-id" defaultChecked={true} name={labelText}/>
 					<label htmlFor="checkbox-id">{labelText}</label>
 				</div>
 			);
