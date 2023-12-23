@@ -32,7 +32,7 @@ const FormElement: React.FC<FormElement> = ({
 					id="outlined-basic"
 					variant="outlined"
 					size="small"
-					className="input-style"
+					className="fullwidth"
 				/>
 			);
 		} else if (formType === "select") {
@@ -40,7 +40,7 @@ const FormElement: React.FC<FormElement> = ({
 				<FormControl
 					sx={{ m: 0, minWidth: 0 }}
 					size="small"
-					className="input-style"
+					className="fullwidth"
 				>
 					<Select
 						value={selection}
@@ -65,7 +65,7 @@ const FormElement: React.FC<FormElement> = ({
 					<DateTimeField
 						defaultValue={dayjs("2022-04-17T15:30")}
 						size="small"
-						className="input-style"
+						className="fullwidth"
 					/>
 				</LocalizationProvider>
 			);

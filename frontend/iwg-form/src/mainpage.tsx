@@ -13,10 +13,9 @@ const MainPage: React.FC = () => {
     //const [value, onChange] = useState<Value>(new Date());
     return (
         <main id="mainpage">
-
-
             <div className="form-container">
-                <div className="parent">
+                {/* form title with logo */}
+                <div className="row max-space">
                     <div className="child">
                         <h1 className="form-heading">Report an Incident</h1>
                     </div>
@@ -40,8 +39,7 @@ const MainPage: React.FC = () => {
                     <span className="required">Required</span>
                 </div>
                 <div className="subheader">Send my report to:</div>
-
-                <div className='parent'>
+                <div className='row max-space'>
                     <div className="child">
                         <CheckWithText text="CAIR" />
                     </div>
@@ -52,16 +50,11 @@ const MainPage: React.FC = () => {
                         <CheckWithText text="ECRT" />
                     </div>
                 </div>
-
-  
-
                 <div className="subheader">Enter your Information:</div>
-
                 <div className="bottom-margin">
                     <CheckWithText text="Keep my report anonymous" />
                     <CheckWithText text="I consent to give media my contact info" />
                 </div>
-
                 <div className="row">
                     <FormElement labelText="Umich Email" formType="text" />
                     <FormElement
@@ -70,17 +63,14 @@ const MainPage: React.FC = () => {
                         data={AffiliationList}
                     />
                 </div>
-
                 <div className="row">
                     <FormElement labelText="First Name" formType="text" />
                     <FormElement labelText="Last Name" formType="text" />
                 </div>
-
                 <div className="row">
                     <FormElement labelText="Phone" formType="text" />
                     <FormElement labelText="Zip" formType="text" />
                 </div>
-
                 <div className="row">
                     <FormElement labelText="Street" formType="text" />
                     <FormElement labelText="City" formType="text" />
@@ -90,7 +80,6 @@ const MainPage: React.FC = () => {
                         data={usStates}
                     />
                 </div>
-
                 <div className="row">
                     <FormElement
                         labelText="Religion"
@@ -99,11 +88,7 @@ const MainPage: React.FC = () => {
                     />
                     <FormElement labelText="Race/Ethnicity" formType="text" />
                 </div>
-
-               
-
                 <div className="subheader">Tell us about the incident:</div>
-
                 <div className="row">
                     <FormElement
                         labelText="Incident Location"
@@ -121,19 +106,17 @@ const MainPage: React.FC = () => {
                         </span>
                         <span className="asterisk">*</span>
                     </div>
-                    {/* <Spacer height={3} /> */}
                     <TextField
                         id="outlined-multiline-static"
                         multiline
                         rows={4}
-                        className="TextField"
+                        className="fullwidth"
                     />
                 </div>
                 <div className="bottom-margin">
                     <div>
                         <span className="label-style">Attach Evidence</span>
                     </div>
-                    {/* <Spacer height={3} /> */}
                     <button className="image-button-style">
                         <img
                             src="/material-symbols_image-outline.svg"

@@ -1,7 +1,6 @@
 .form-item{
     margin-right: 10px;
     flex-grow: 1;
-
     width: 100%;
 }
 
@@ -11,9 +10,4 @@
 
 .form-item:last-child{
     margin-right: 0px;
-}
-
-.input-style{
-    /* border: solid blue 2px; */
-    width: 100%;
 }

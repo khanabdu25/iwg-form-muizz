@@ -30,13 +30,19 @@
 	font-family: "Inter", sans-serif;
 }
 
-.parent {
+.row {
     display: flex;
+    justify-content: flex-start;
+    margin-bottom: 1rem;
+}
+
+/* max-space inherits row */
+/* usage: row max-space */
+.max-space {
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
     align-items: center;
-	margin-bottom: 1rem;
 }
 
 .child {
@@ -44,12 +50,6 @@
     white-space: nowrap;
 }
 
-.row {
-	
-	display: flex;
-	justify-content: flex-start;
-	margin-bottom: 1rem;
-}
 .subheader {
 	color: #000;
 	font-size: 1.25rem;
@@ -61,9 +61,6 @@
 	display: flex;
 	align-items: center;
 	gap: 8px;
-}
-
-.check-with-text input[type="checkbox"] {
 }
 
 .check-with-text label {
@@ -120,7 +117,7 @@
 	margin-bottom: 1rem;
 }
 
-.TextField {
+.fullwidth {
 	width: 100%;
 }
 
@@ -129,19 +126,18 @@
 	height: 24.17px;
 	background-color: white;
 	border-radius: 5px;
-	border: 1px solid #d1d5db; /* Tailwind CSS neutral-500 */
+	border: 1px solid #d1d5db;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	gap: 8px; /* Adjust the gap between icon and text as needed */
-	padding: 4px; /* Adjust for padding inside the button */
+	gap: 8px; 
+	padding: 4px;
 	box-sizing: border-box;
 }
 
 .icon-style {
 	width: 19.08px;
 	height: 19.08px;
-	/* If your icon is SVG, additional styling can be applied as needed */
 }
 
 .text-style {
