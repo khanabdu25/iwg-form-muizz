@@ -22,7 +22,6 @@
   /* justify-content: flex-start;  */
   overflow-y: auto; 
   min-width: 200px;
-  background-color: rgb(228, 115, 115);
 }
 
 /* @media (min-width: 768px) {

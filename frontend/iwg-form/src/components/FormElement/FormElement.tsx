@@ -1,4 +1,4 @@
-import React, { CSSProperties } from "react";
+import React from "react";
 import { TextField } from "@mui/material";
 import FormControl from "@mui/material/FormControl";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
@@ -65,6 +65,7 @@ const FormElement: React.FC<FormElement> = ({
 					<DateTimeField
 						defaultValue={dayjs("2022-04-17T15:30")}
 						size="small"
+						className="input-style"
 					/>
 				</LocalizationProvider>
 			);
@@ -79,41 +80,5 @@ const FormElement: React.FC<FormElement> = ({
 		</div>
 	);
 };
-
-// 	return (
-// 		<div style={containerStyle}>
-// 			<div>
-// 				<span style={labelStyle}>{labelText}</span>
-// 				<span style={asteriskStyle}>*</span>
-// 			</div>
-// 			{getType()}
-// 		</div>
-// 	);
-// };
-
-// const labelStyle: CSSProperties = {
-// 	color: "#a0aec0",
-// 	fontSize: "15px",
-// 	fontWeight: "normal",
-// 	fontFamily: "Inter, sans-serif",
-// 	textDecoration: "underline",
-// };
-
-// const asteriskStyle: CSSProperties = {
-// 	color: "#e3342f",
-// 	fontSize: "15px",
-// 	fontWeight: "normal",
-// 	fontFamily: "Inter, sans-serif",
-// };
-
-// const containerStyle: CSSProperties = {
-// 	display: "flex",
-// 	flexDirection: "column",
-// 	alignItems: "flex-start",
-// 	gap: "5px",
-// 	backgroundColor: "black",
-// 	width: "100%",
-// 	// margin: "2px"
-// };
 
 export default FormElement;

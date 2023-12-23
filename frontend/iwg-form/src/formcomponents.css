@@ -31,31 +31,25 @@
 }
 
 .parent {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around; /* Adjusts spacing between children */
-	width: 100%;
-	/* background-color: red; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
 	margin-bottom: 1rem;
-	min-width: 300px;
-}
-
-.row {
-	background-color: rgb(143, 143, 229);
-	display: flex;
-	justify-content: flex-start;
-	margin-bottom: 5px;
 }
 
 .child {
-	flex: 1; /* Makes children take equal width */
-	/* background-color: blue; */
-	white-space: nowrap;
-	padding: 0.5rem; /* Optional: Adds some padding inside children */
-	margin: 0 0.5rem; /* Optional: Adds some margin between children */
-	min-width: 50%;
+    flex-shrink: 1;
+    white-space: nowrap;
 }
 
+.row {
+	
+	display: flex;
+	justify-content: flex-start;
+	margin-bottom: 1rem;
+}
 .subheader {
 	color: #000;
 	font-size: 1.25rem;
