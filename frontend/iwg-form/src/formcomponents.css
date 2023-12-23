@@ -1,150 +1,158 @@
 /* FormComponent.css */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
 
 .form-heading {
-    color: #000; /* text-black equivalent */
-  font-size: 1.5rem; /* text-2xl equivalent */
-  font-weight: bold; /* font-bold equivalent */
-  font-family: 'Inter', sans-serif; /* font-['Inter'] equivalent */
-    margin: 10px 0;
-  }
+	color: #000; /* text-black equivalent */
+	font-size: 1.5rem; /* text-2xl equivalent */
+	font-weight: bold; /* font-bold equivalent */
+	font-family: "Inter", sans-serif; /* font-['Inter'] equivalent */
+	margin: 10px 0;
+}
 
 .asterisk {
-    color: #e3342f;
-    font-size: 0.75rem;
-    font-weight: 400;
-    font-family: 'Inter', sans-serif;
+	color: #e3342f;
+	font-size: 0.75rem;
+	font-weight: 400;
+	font-family: "Inter", sans-serif;
 }
-  
+
 .information {
-    color: #a0aec0;
-    font-size: 10px;
-    font-weight: 400;
-    font-family: 'Inter', sans-serif;
+	color: #a0aec0;
+	font-size: 10px;
+	font-weight: 400;
+	font-family: "Inter", sans-serif;
 }
-  
+
 .required {
-    color: #000;
-    font-size: 0.75rem;
-    font-weight: 400;
-    font-family: 'Inter', sans-serif;
+	color: #000;
+	font-size: 0.75rem;
+	font-weight: 400;
+	font-family: "Inter", sans-serif;
 }
 
 .parent {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-    align-items: center;
-    margin-bottom: 1rem;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around; /* Adjusts spacing between children */
+	width: 100%;
+	/* background-color: red; */
+	margin-bottom: 1rem;
+	min-width: 300px;
+}
+
+.row {
+	background-color: rgb(143, 143, 229);
+	display: flex;
+	justify-content: flex-start;
+	margin-bottom: 5px;
 }
 
 .child {
-    flex-shrink: 1;
-    white-space: nowrap;
+	flex: 1; /* Makes children take equal width */
+	/* background-color: blue; */
+	white-space: nowrap;
+	padding: 0.5rem; /* Optional: Adds some padding inside children */
+	margin: 0 0.5rem; /* Optional: Adds some margin between children */
+	min-width: 50%;
 }
 
 .subheader {
-    color: #000; 
-    font-size: 1.25rem; 
-    font-weight: bold; 
-    font-family: 'Inter', sans-serif; 
-  }
+	color: #000;
+	font-size: 1.25rem;
+	font-weight: bold;
+	font-family: "Inter", sans-serif;
+}
 
-  .check-with-text {
-    display: flex;
-    align-items: center; 
-    gap: 8px; 
+.check-with-text {
+	display: flex;
+	align-items: center;
+	gap: 8px;
 }
 
 .check-with-text input[type="checkbox"] {
-   
 }
 
 .check-with-text label {
-    color: #a0aec0; 
-    font-size: 15px; 
-    font-weight: normal; 
-    font-family: 'Inter', sans-serif; 
-    text-decoration: underline; 
+	color: #a0aec0;
+	font-size: 15px;
+	font-weight: normal;
+	font-family: "Inter", sans-serif;
+	text-decoration: underline;
 }
 
 .label-style {
-    color: #a0aec0;
-    font-size: 15px;
-    font-weight: normal;
-    font-family: 'Inter', sans-serif;
-    text-decoration: underline;
+	color: #a0aec0;
+	font-size: 15px;
+	font-weight: normal;
+	font-family: "Inter", sans-serif;
+	text-decoration: underline;
 }
 
 .button-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-  }
-  
-  .button-style {
-    width: 110.66px;
-    height: 34.34px;
-    background-color: #48bb78;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.10);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .submit-text {
-    color: white;
-    font-size: 1rem;
-    font-weight: bold;
-    font-family: 'Inter', sans-serif;
-  }
-  
-  .send-symbol {
-    width: 17.81px;
-    height: 17.81px;
-    position: relative;
-  }
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: center;
+}
 
-  .bottom-margin {
-    margin-bottom: 1rem;
-  }
+.button-style {
+	width: 110.66px;
+	height: 34.34px;
+	background-color: #48bb78;
+	border-radius: 5px;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 8px;
+	border: none;
+	cursor: pointer;
+}
 
-  .TextField {
-    width: 100%;
-  }
+.submit-text {
+	color: white;
+	font-size: 1rem;
+	font-weight: bold;
+	font-family: "Inter", sans-serif;
+}
 
-  .image-button-style {
-    width: 139.92px;
-    height: 24.17px;
-    background-color: white;
-    border-radius: 5px;
-    border: 1px solid #D1D5DB; /* Tailwind CSS neutral-500 */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px; /* Adjust the gap between icon and text as needed */
-    padding: 4px; /* Adjust for padding inside the button */
-    box-sizing: border-box;
-  }
-  
-  .icon-style {
-    width: 19.08px;
-    height: 19.08px;
-    /* If your icon is SVG, additional styling can be applied as needed */
-  }
-  
-  .text-style {
-    color: black;
-    font-size: 10.88px;
-    font-family: 'Inter', sans-serif;
-    font-weight: normal;
-  }
-  
-  
-  
+.send-symbol {
+	width: 17.81px;
+	height: 17.81px;
+	position: relative;
+}
+
+.bottom-margin {
+	margin-bottom: 1rem;
+}
+
+.TextField {
+	width: 100%;
+}
+
+.image-button-style {
+	width: 139.92px;
+	height: 24.17px;
+	background-color: white;
+	border-radius: 5px;
+	border: 1px solid #d1d5db; /* Tailwind CSS neutral-500 */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 8px; /* Adjust the gap between icon and text as needed */
+	padding: 4px; /* Adjust for padding inside the button */
+	box-sizing: border-box;
+}
+
+.icon-style {
+	width: 19.08px;
+	height: 19.08px;
+	/* If your icon is SVG, additional styling can be applied as needed */
+}
+
+.text-style {
+	color: black;
+	font-size: 10.88px;
+	font-family: "Inter", sans-serif;
+	font-weight: normal;
+}
