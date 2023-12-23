@@ -4,6 +4,10 @@ import FormControl from "@mui/material/FormControl";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
 import MenuItem from "@mui/material/MenuItem";
 import "./FormElement.css";
+import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
+import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
+import { DateTimeField } from "@mui/x-date-pickers/DateTimeField";
+import dayjs from "dayjs";
 
 interface FormElement {
 	labelText: string;
@@ -58,8 +62,16 @@ const FormElement: React.FC<FormElement> = ({
 				</FormControl>
 			);
 		} else if (formType === "time") {
-			return <p>hello</p>;
-		} else if (formType === "multiline-text") {
+			return (
+				<LocalizationProvider dateAdapter={AdapterDayjs}>
+					<DateTimeField
+						defaultValue={dayjs("2022-04-17T15:30")}
+						size="small"
+						className="fullwidth"
+					/>
+				</LocalizationProvider>
+			);
+		}else if (formType === "multiline-text") {
 			return (
 
 				<TextField
@@ -81,19 +93,13 @@ const FormElement: React.FC<FormElement> = ({
 					<input
 						type="file"
 						accept="image/*"
-						// onChange={handleFileChange}
+						// onChange={handleFileChange} // Uncomment and implement handleFileChange function
 						style={{ display: "none" }}
-						name={labelText}
-
-				<LocalizationProvider dateAdapter={AdapterDayjs}>
-					<DateTimeField
-						defaultValue={dayjs("2022-04-17T15:30")}
-						size="small"
-						className="fullwidth"
-
+						name={labelText} // Ensure labelText is defined in your component
 					/>
 				</label>
 			);
+			
 		} else if (formType === "checkbox"){
 			return (
 				<div className="check-with-text">

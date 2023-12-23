@@ -26,22 +26,26 @@ const MainPage: React.FC = () => {
 
 	return (
 		<main id="mainpage">
-			<div className="parent">
-				<h1 className="form-heading">Report an Incident</h1>
-				<img
-					style={{
-						maxWidth: "60px",
-						maxHeight: "61px",
-						height: "auto",
-						width: "auto",
-						flexShrink: 0,
-					}}
-					src={LOGO_PATH}
-					alt="Description"
-				/>
-			</div>
 
 			<form ref={formRef} className="form-container" onSubmit={handleSubmit}>
+            <div className="row max-space">
+                    <div className="child">
+                        <h1 className="form-heading">Report an Incident</h1>
+                    </div>
+                    <div className = "child">
+                        <img
+                            style={{
+                                maxWidth: "60px",
+                                maxHeight: "61px",
+                                height: "auto",
+                                width: "auto",
+                                flexShrink: 0,
+                            }}
+                            src={LOGO_PATH}
+                            alt="Description"
+                        />
+                    </div>
+                </div>
 				<div>
 					<span className="asterisk">*</span>
 					<span className="information"> </span>
