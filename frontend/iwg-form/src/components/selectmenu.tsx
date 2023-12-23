@@ -24,8 +24,9 @@ const SelectLabels: React.FC<SelectLabelsProps> = ({ labelText, options }) => {
             <span style={asteriskStyle}>*</span>
         </div>
         <div> 
-            <FormControl sx={{ m: 0, minWidth: 180 }}>
+            <FormControl sx={{ m: 0, minWidth: 180 }}size="small">
                 <Select
+                  
                   value={selection}
                   onChange={handleChange}
                   displayEmpty

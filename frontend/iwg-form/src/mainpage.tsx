@@ -105,7 +105,7 @@ const MainPage: React.FC = () => {
                         <span className="asterisk">*</span>
                     </div>
 
-                    <TextField className="TextField" />
+                    <TextField className="TextField" size="small"/>
                 </div>
 
                 <div className='parent'>
@@ -139,7 +139,7 @@ const MainPage: React.FC = () => {
                         </div>
                         <Spacer height={3} />
                         <LocalizationProvider dateAdapter={AdapterDayjs}>
-                            <DateTimeField defaultValue={dayjs('2022-04-17T15:30')} />
+                            <DateTimeField defaultValue={dayjs('2022-04-17T15:30')} size="small"/>
                         </LocalizationProvider>
                     </div>
                 </div>

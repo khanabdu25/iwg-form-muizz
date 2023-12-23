@@ -35,7 +35,7 @@ const TextfieldWithLabel: React.FC<TextfieldWithLabelProps> = ({ labelText }) =>
                 <span style={asteriskStyle}>*</span>
             </div>
             <div>
-                <TextField id="outlined-basic" variant="outlined" />
+                <TextField id="outlined-basic" variant="outlined" size="small"/>
             </div>
         </div>
     );
